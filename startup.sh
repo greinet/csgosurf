@@ -36,7 +36,7 @@ if [ ! -f "/steam/pluginmarker" ]; then
   wget -O /steam/csgo/csgo/addons/sourcemod/extensions/cleaner.ext.2.csgo.so https://github.com/Accelerator74/Cleaner/raw/master/Release/cleaner.ext.2.csgo.so
   #Database configuration
   echo "Installing Database configuration"
-  wget -O /steam/csgo/csgo/addons/soourcemod/configs/databases.cfg https://raw.githubusercontent.com/greinet/csgosurf/master/databases.cfg
+  wget -O /steam/csgo/csgo/addons/sourcemod/configs/databases.cfg https://raw.githubusercontent.com/greinet/csgosurf/master/databases.cfg
   
   cd /steam/csgo/
   echo "Finished installing plugins"
