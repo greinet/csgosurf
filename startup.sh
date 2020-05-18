@@ -18,7 +18,7 @@ if [ ! -f "/steam/pluginmarker" ]; then
   #SteamWorks
   curl -sqL "http://users.alliedmods.net/~kyles/builds/SteamWorks/SteamWorks-git132-linux.tar.gz"  | tar xz -C /steam/csgo/csgo
   #Discord Api
-  wget -O /steam/csgo/csgo/addons/sourcemod/plugins/discord_api.smx https://github.com/greinet/csgosurf/raw/master/discord_api.smx
+  wget -O /steam/csgo/csgo/addons/sourcemod/plugins/discord_api.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/discord_api.smx
   
   
   
