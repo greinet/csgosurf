@@ -21,7 +21,8 @@ if [ ! -f "/steam/pluginmarker" ]; then
   wget -O /steam/csgo/csgo/addons/sourcemod/plugins/discord_api.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/discord_api.smx
   #Surftimer
   wget -O /steam/csgo/csgo/addons/sourcemod/plugins/discord_api.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/discord_api.smx
-  
+  #Cleaner
+  wget -O /steam/csgo/csgo/addons/sourcemod/extensions/cleaner.ext.2.csgo.so https://github.com/Accelerator74/Cleaner/raw/master/Release/cleaner.ext.2.csgo.so
   
   
   cd /steam/csgo/
