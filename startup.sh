@@ -14,7 +14,11 @@ if [ ! -f "/steam/pluginmarker" ]; then
   curl -sqL "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6488-linux.tar.gz"  | tar xz -C /steam/csgo/csgo
   #DHooks
   echo "Installing DHooks"
-  wget -O dhooks.zip  https://github.com/peace-maker/DHooks2/releases/download/v2.2.0-detours10/dhooks-2.2.0-detours10-sm110.zip && unzip dhooks.zip && rm dhooks.zip
+  wget -O dhooks.zip  https://github.com/peace-maker/DHooks2/releases/download/v2.2.0-detours10/dhooks-2.2.0-detours10-sm110.zip
+  echo "wget done"
+  unzip dhooks.zip
+  echo "unzip done"
+  rm dhooks.zip
   #SMJansson
   echo "Installing SMJansson"
   wget -O /steam/csgo/csgo/addons/sourcemod/extensions/smjansson.ext.so https://github.com/JoinedSenses/SMJansson/raw/master/bin/smjansson.ext.so
