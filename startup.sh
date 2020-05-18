@@ -15,6 +15,12 @@ if [ ! -f "/steam/pluginmarker" ]; then
   wget -O dhooks.zip  https://github.com/peace-maker/DHooks2/releases/download/v2.2.0-detours10/dhooks-2.2.0-detours10-sm110.zip && unzip dhooks.zip && rm dhooks.zip
   #SMJansson
   wget -O /steam/csgo/csgo/addons/sourcemod/extensions/smjansson.ext.so https://github.com/JoinedSenses/SMJansson/raw/master/bin/smjansson.ext.so
+  #SteamWorks
+  curl -sqL "http://users.alliedmods.net/~kyles/builds/SteamWorks/SteamWorks-git132-linux.tar.gz"  | tar xz -C /steam/csgo/csgo
+  
+  
+  
+  
   cd /steam/csgo/
 fi
 
