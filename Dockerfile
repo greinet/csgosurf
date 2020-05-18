@@ -24,6 +24,7 @@ USER steam
 RUN curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz"  | tar xz -C $DIR_STEAMCMD
 
 #Install Metamod and Sourcemod
+RUN mkdir $DIR_CSGO/csgo
 RUN curl -sqL "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz"  | tar xz -C $DIR_CSGO/csgo
 RUN curl -sqL "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6488-linux.tar.gz"  | tar xz -C $DIR_CSGO/csgo
 
