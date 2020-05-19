@@ -37,14 +37,14 @@ if [ ! -f "/steam/pluginmarker" ]; then
   wget -O /steam/plugins/addons/sourcemod/configs/databases.cfg https://raw.githubusercontent.com/greinet/csgosurf/master/databases.cfg
   #Surftimer
   echo "Installing SurfTimer"
-  wget -O timer.zip  https://github.com/surftimer/Surftimer-olokos/archive/dev.zip
+  wget -O timer.zip  https://github.com/surftimer/Surftimer-olokos/archive/285.zip
   echo "wget done"
   unzip -o timer.zip
   echo "unzip done"
   rm timer.zip
   echo "copy files"
-  cp -r Surftimer-olokos-dev/addons Surftimer-olokos-dev/cfg Surftimer-olokos-dev/maps Surftimer-olokos-dev/scripts Surftimer-olokos-dev/sound Surftimer-olokos-dev/tools .
-  rm -rf Surftimer-olokos-dev
+  cp -r Surftimer-olokos-dev/addons Surftimer-olokos-285/cfg Surftimer-olokos-285/maps Surftimer-olokos-285/scripts Surftimer-olokos-285/sound Surftimer-olokos-285/tools .
+  rm -rf Surftimer-olokos-285
   
   wget -O /steam/plugins/addons/sourcemod/plugins/discord_api.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/SurfTimer.smx
   
