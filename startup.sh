@@ -20,6 +20,15 @@ if [ ! -f "/steam/pluginmarker" ]; then
   unzip dhooks.zip
   echo "unzip done"
   rm dhooks.zip
+  #SMLib
+  echo "Installing SMLib"
+  wget -O smlib.zip  https://github.com/bcserv/smlib/archive/0.11.zip
+  echo "wget done"
+  unzip smlib.zip
+  echo "unzip done"
+  cp -r smlib-0.11/* .
+  rm smlib.zip
+  rm -rf smlib-0.11/
   #SMJansson
   echo "Installing SMJansson"
   wget -O /steam/plugins/addons/sourcemod/extensions/smjansson.ext.so https://github.com/JoinedSenses/SMJansson/raw/master/bin/smjansson.ext.so
