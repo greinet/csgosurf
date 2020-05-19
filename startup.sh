@@ -9,10 +9,15 @@ if [ ! -f "/steam/pluginmarker" ]; then
   mkdir /steam/plugins
   echo "Installing plugins"
   cd /steam/plugins
+  
   #SM und MM
   echo "Installing Sourcemod and Metamod"
   curl -sqL "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz"  | tar xz -C /steam/plugins/
   curl -sqL "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6488-linux.tar.gz"  | tar xz -C /steam/plugins/
+  
+  #Stripper
+  curl -sqL "http://www.bailopan.net/stripper/files/stripper-1.2.2-linux.tar.gz"  | tar xz -C /steam/plugins/
+  
   #DHooks
   echo "Installing DHooks"
   wget -O dhooks.zip  https://github.com/peace-maker/DHooks2/releases/download/v2.2.0-detours10/dhooks-2.2.0-detours10-sm110.zip
@@ -20,6 +25,7 @@ if [ ! -f "/steam/pluginmarker" ]; then
   unzip dhooks.zip
   echo "unzip done"
   rm dhooks.zip
+  
   #SMLib
   echo "Installing SMLib"
   wget -O smlib.zip  https://github.com/bcserv/smlib/archive/0.11.zip
@@ -29,21 +35,27 @@ if [ ! -f "/steam/pluginmarker" ]; then
   cp -r smlib-0.11/* .
   rm smlib.zip
   rm -rf smlib-0.11/
+  
   #SMJansson
   echo "Installing SMJansson"
   wget -O /steam/plugins/addons/sourcemod/extensions/smjansson.ext.so https://github.com/JoinedSenses/SMJansson/raw/master/bin/smjansson.ext.so
+  
   #SteamWorks
   echo "Installing SteamWorks"
   curl -sqL "http://users.alliedmods.net/~kyles/builds/SteamWorks/SteamWorks-git132-linux.tar.gz"  | tar xz -C /steam/plugins/
+  
   #Discord Api
   echo "Installing Discord Api"
   wget -O /steam/plugins/addons/sourcemod/plugins/discord_api.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/discord_api.smx
+  
   #Cleaner
   echo "Installing Cleaner"
   wget -O /steam/plugins/addons/sourcemod/extensions/cleaner.ext.2.csgo.so https://github.com/Accelerator74/Cleaner/raw/master/Release/cleaner.ext.2.csgo.so
+  
   #Database configuration
   echo "Installing Database configuration"
   wget -O /steam/plugins/addons/sourcemod/configs/databases.cfg https://raw.githubusercontent.com/greinet/csgosurf/master/databases.cfg
+  
   #Surftimer
   echo "Installing SurfTimer"
   wget -O timer.zip  https://github.com/surftimer/Surftimer-olokos/archive/285.zip
@@ -54,15 +66,11 @@ if [ ! -f "/steam/pluginmarker" ]; then
   echo "copy files"
   cp -r Surftimer-olokos-285/addons Surftimer-olokos-285/cfg Surftimer-olokos-285/maps Surftimer-olokos-285/scripts Surftimer-olokos-285/sound Surftimer-olokos-285/tools .
   rm -rf Surftimer-olokos-285
-  
   wget -O /steam/plugins/addons/sourcemod/plugins/SurfTimer.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/SurfTimer.smx
   
   chmod -R 777 /steam/plugins
-  
   cp -r /steam/plugins/. /steam/csgo/csgo
-  
   rm -rf /steam/plugins/
-  
   cd /steam/csgo/
   echo "Finished installing plugins"
 fi
