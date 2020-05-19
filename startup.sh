@@ -55,7 +55,7 @@ if [ ! -f "/steam/pluginmarker" ]; then
   cp -r Surftimer-olokos-dev/addons Surftimer-olokos-285/cfg Surftimer-olokos-285/maps Surftimer-olokos-285/scripts Surftimer-olokos-285/sound Surftimer-olokos-285/tools .
   rm -rf Surftimer-olokos-285
   
-  wget -O /steam/plugins/addons/sourcemod/plugins/discord_api.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/SurfTimer.smx
+  wget -O /steam/plugins/addons/sourcemod/plugins/SurfTimer.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/SurfTimer.smx
   
   chmod -R 777 /steam/plugins
   
