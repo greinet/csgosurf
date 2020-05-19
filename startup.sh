@@ -42,7 +42,17 @@ if [ ! -f "/steam/pluginmarker" ]; then
   unzip -o timer.zip
   echo "unzip done"
   rm timer.zip
+  echo "copy files"
+  cp -r Surftimer-olokos-dev/addons Surftimer-olokos-dev/cfg Surftimer-olokos-dev/maps Surftimer-olokos-dev/scripts Surftimer-olokos-dev/sound Surftimer-olokos-dev/tools .
+  rm -rf Surftimer-olokos-dev
+  
   wget -O /steam/plugins/addons/sourcemod/plugins/discord_api.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/SurfTimer.smx
+  
+  chmod -R 777 /steam/plugins
+  
+  cp -r /steam/plugins/. /steam/csgo/csgo
+  
+  rm -rf /steam/plugins/
   
   cd /steam/csgo/
   echo "Finished installing plugins"
