@@ -16,6 +16,7 @@ if [ ! -f "/steam/pluginmarker" ]; then
   curl -sqL "https://sm.alliedmods.net/smdrop/1.10/sourcemod-1.10.0-git6488-linux.tar.gz"  | tar xz -C /steam/plugins/
   
   #Stripper
+  echo "Installing Stripper"
   curl -sqL "http://www.bailopan.net/stripper/files/stripper-1.2.2-linux.tar.gz"  | tar xz -C /steam/plugins/
   
   #DHooks
@@ -25,6 +26,14 @@ if [ ! -f "/steam/pluginmarker" ]; then
   unzip dhooks.zip
   echo "unzip done"
   rm dhooks.zip
+  
+  #ColorLib
+  echo "Installing ColorLib"
+  wget -O colorlib.zip  https://github.com/c0rp3n/colorlib-sm/releases/download/v0.2.0/colorlib-sm-0.2.0.zip
+  echo "wget done"
+  unzip colorlib.zip
+  echo "unzip done"
+  rm colorlib.zip
   
   #SMLib
   echo "Installing SMLib"
