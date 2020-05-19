@@ -52,7 +52,7 @@ if [ ! -f "/steam/pluginmarker" ]; then
   echo "unzip done"
   rm timer.zip
   echo "copy files"
-  cp -r Surftimer-olokos-dev/addons Surftimer-olokos-285/cfg Surftimer-olokos-285/maps Surftimer-olokos-285/scripts Surftimer-olokos-285/sound Surftimer-olokos-285/tools .
+  cp -r Surftimer-olokos-285/addons Surftimer-olokos-285/cfg Surftimer-olokos-285/maps Surftimer-olokos-285/scripts Surftimer-olokos-285/sound Surftimer-olokos-285/tools .
   rm -rf Surftimer-olokos-285
   
   wget -O /steam/plugins/addons/sourcemod/plugins/SurfTimer.smx https://github.com/surftimer/Surftimer-olokos/releases/download/285/SurfTimer.smx
