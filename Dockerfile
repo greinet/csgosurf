@@ -8,7 +8,7 @@ ENV DIR_CSGO /steam/csgo
 
 RUN apt-get -y update \
     && apt-get -y upgrade \
-    && apt-get -y install lib32gcc1 curl net-tools lib32stdc++6 python3 zip unzip wget \
+    && apt-get -y install lib32gcc1 curl net-tools lib32stdc++6 lib32z1 python3 zip unzip wget \
     && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && useradd steam \
     && mkdir $DIR_STEAM \
