@@ -83,8 +83,8 @@ if [ ! -f "/steam/pluginmarker" ]; then
   wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=0B-gvqLVXDjSVX3ZnLXJ4YkdJX2c' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=0B-gvqLVXDjSVX3ZnLXJ4YkdJX2c" -O tier-1.tar.gz && rm -rf /tmp/cookies.txt && tar -xzvf tier-1.tar.gz && bunzip2 tier_1/* && mv tier_1 maps && rm tier-1.tar.gz
   
   #Creating maplist and mapcycle
-  ls -1 maps | sed -e 's/\.bsp$//' >> /steam/plugins/mapcycle.txt
-  ls -1 maps | sed -e 's/\.bsp$//' >> /steam/plugins/maplist.txt
+  ls -1 maps | sed -e 's/\.bsp$//' > /steam/plugins/mapcycle.txt
+  ls -1 maps | sed -e 's/\.bsp$//' > /steam/plugins/maplist.txt
   
   #Creating mapgroup
   wget -O gamemodes_server.txt https://raw.githubusercontent.com/greinet/csgosurf-influx/master/gamemodes_server.txt
