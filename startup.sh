@@ -10,6 +10,17 @@ if [ ! -f "/steam/pluginmarker" ]; then
   echo "Installing plugins"
   cd /steam/plugins
   
+    #server.cfg
+  mkdir cfg
+  echo "sv_maxrate 0
+sv_minrate 80000
+sv_mincmdrate 128
+sv_maxupdaterate 128
+sv_minupdaterate 128" >> cfg/server.cfg
+  
+  #Set Sourcemod admin
+  echo $ADMIN"      99:z" >> /steam/plugins/addons/sourcemod/configs/admins_simple.ini
+  
   #SM und MM
   echo "Installing Sourcemod and Metamod"
   curl -sqL "https://mms.alliedmods.net/mmsdrop/1.10/mmsource-1.10.7-git971-linux.tar.gz"  | tar xz -C /steam/plugins/
